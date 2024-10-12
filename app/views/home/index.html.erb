@@ -1,0 +1,12 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="font-bold text-4xl">Rentable Lite</h1>
+  <h4>Every Apartment Near You, In One Place</h4>
+  <div class="my-5">
+    <%= form_tag properties_path, method: :get do %>
+      <% render "search_bar" %>
+    <% end %>
+  </div>
+  <div class="my-5 grid justify-items-center">
+    <p>Got a new property to add?</p>
+    <%= link_to 'Add a new property', new_property_path, class: "my-5 rounded-lg py-3 px-5 bg-rose-600 text-white inline-block font-medium cursor-pointer" %>
+</div>

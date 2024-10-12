@@ -1,0 +1,17 @@
+<nav class="flex items-center justify-between flex-wrap bg-rose-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <svg class="fill-current h-8 w-8 mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart" viewBox="0 0 16 16">
+            <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982"/>
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+        </svg>
+        <%= link_to "Rentable Lite", root_path, class: "font-semibold text-xl tracking-tight" %>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <%= link_to "Properties", properties_path, { class: "block mt-4 lg:inline-block lg:mt-0 text-rose-200 hover:text-white mr-4" } %>
+    </div>
+    <%# The following can be used for a right-aligned button %>
+    <%# <div>
+      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-rose-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+    </div> %>
+  </div>
+</nav>

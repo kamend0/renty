@@ -13,6 +13,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+    @property.units.build
   end
 
   # GET /properties/1/edit
@@ -67,7 +68,7 @@ class PropertiesController < ApplicationController
     def property_params
       params.require(:property).permit(
         :address, :city, :state,
-        unit_attributes: [:id, :bedroom_count, :bathroom_count, :square_footage, :rent_price]
+        units_attributes: [:id, :bedroom_count, :bathroom_count, :square_footage, :rent_price, :_destroy]
       )
     end
 end
