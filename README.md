@@ -28,3 +28,6 @@ Finally, run the app as usual with `rails s`.
 
 Once the app is running, navigate to http://127.0.0.1:3000 and click around! Search for 
 a city, add a new property, or edit some existing ones to your heart's content.
+
+NOTE: I didn't define any tests for this app, nor did I configure the existing ones. I 
+can't vouch for the performance or accuracy of any generated tests.
