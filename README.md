@@ -1,6 +1,6 @@
 # Renty
 
-This is a work example I prepared for Rentable on Oct. 12th, 2024 in ~5 hours for an  
+This is a work example I prepared for Rentable on Oct. 12th, 2024 in ~5 hours for an 
 interview process for a full-stack web developer position. It's a Rails app which allows 
 users to upload properties (address/city/state), add units to those properties (showing 
 their number of beds and baths, square footage, and monthly rent), and search for 
