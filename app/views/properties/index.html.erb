@@ -14,6 +14,12 @@
     <%= render "shared/add_a_new_property_button" %>
   </div>
 
+  <% if params[:city].present? %>
+    <div class="my-5">
+      <p>Your search for "<%= params[:city] %>" returned <%= @pagy.count %> properties:
+    </div>
+  <% end %>
+
   <div id="properties-list" class="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
     <% @properties.each do |property| %>
       <%= render "properties/property_thumbnail", property: property %>

@@ -1,5 +1,5 @@
 <div class="my-5">
-    <% units.each_with_index do |unit, index| %>
+    <% units.order(:id).each_with_index do |unit, index| %>
         <div class="my-5">
             <h2 class="font-bold text-2xl">Unit <%= index + 1 %></h2>
             <ul id="<%= "property-unit-" + index.to_s %>">
