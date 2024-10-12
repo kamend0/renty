@@ -1,3 +1,3 @@
 class Unit < ApplicationRecord
-  belongs_to :property_id
+  belongs_to :property
 end
