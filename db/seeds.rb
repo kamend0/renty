@@ -18,7 +18,8 @@ city_state_map = {
   "New Orleans" => "LA",
   "Los Angeles" => "CA",
   "Chicago" => "IL",
-  "San Francisco" => "CA"
+  "San Francisco" => "CA",
+  "Fremont" => "CA"
 }
 
 # Create 20 properties
