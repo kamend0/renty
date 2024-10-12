@@ -4,11 +4,9 @@ class PropertiesController < ApplicationController
   # GET /properties or /properties.json
   def index
     if params[:city].present? && !params[:city].empty?
-      puts "User searched for" + params[:city].to_s
-      @properties = Property.where('LOWER(city) LIKE ?', "%#{params[:city].downcase}%")
+      @pagy, @properties = pagy(Property.where('LOWER(city) LIKE ?', "%#{params[:city].downcase}%"))
     else
-      puts "No search terms"
-      @properties = Property.all
+      @pagy, @properties = pagy(Property.all)
     end
   end
 

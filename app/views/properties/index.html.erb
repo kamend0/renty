@@ -14,9 +14,13 @@
     <%= render "shared/add_a_new_property_button" %>
   </div>
 
-  <div id="properties" class="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+  <div id="properties-list" class="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
     <% @properties.each do |property| %>
       <%= render "properties/property_thumbnail", property: property %>
     <% end %>
+  </div>
+
+  <div id="properties-page-nav" class="my-5 grid justify-items-center">
+    <%== pagy_nav(@pagy) %>
   </div>
 </div>
