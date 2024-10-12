@@ -15,6 +15,10 @@
   <% end %>
 
   <div class="my-5">
+    <h2 class="font-bold text-2xl">Property Information</h1>
+  </div>
+
+  <div class="my-5">
     <%= form.label :address %>
     <%= form.text_field :address, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
@@ -25,13 +29,17 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :state %>
-    <%= form.select :state, options_for_select(US_STATES), { prompt: "State" } %>
+    <%= form.label :state %><br>
+    <%= form.select :state, options_for_select(US_STATES, @property.state), {}, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2" %>
   </div>
 
+  <div class="my-5">
+    <h2 class="font-bold text-2xl">Units</h1>
+  </div> 
+  
   <%= render "unit_nested_form", form: form %>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-rose-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

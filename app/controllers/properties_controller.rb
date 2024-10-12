@@ -3,7 +3,13 @@ class PropertiesController < ApplicationController
 
   # GET /properties or /properties.json
   def index
-    @properties = Property.all
+    if params[:city].present? && !params[:city].empty?
+      puts "User searched for" + params[:city].to_s
+      @properties = Property.where('LOWER(city) LIKE ?', "%#{params[:city].downcase}%")
+    else
+      puts "No search terms"
+      @properties = Property.all
+    end
   end
 
   # GET /properties/1 or /properties/1.json

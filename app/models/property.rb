@@ -5,4 +5,8 @@ class Property < ApplicationRecord
   validates :address, presence: true
   validates :city, presence: true
   validates :state, inclusion: { in: US_STATE_ABBREVIATIONS }
+
+  def num_units_string
+    units.size.to_s + " unit" + (units.size == 1 ? "" : "s")
+  end
 end

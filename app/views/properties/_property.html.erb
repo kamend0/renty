@@ -1,17 +1,12 @@
-<div id="<%= dom_id property %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Address:</strong>
-    <%= property.address %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">City:</strong>
-    <%= property.city %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">State:</strong>
-    <%= property.state %>
-  </p>
-
+<div class="my-5" id="<%= dom_id property %>">
+  <div class="my-5 flex justify-between items-center">
+    <h1 class="font-bold text-4xl"><%= property.address %></h1>
+    <h2 class="text-2xl"><%= property.city %>, <%= property.state %></h2>
+  </div>
+  <% if property.units.any? %>
+    <p class="text-xl"><%= property.num_units_string %> available at this property:</p>
+    <%= render "properties/property_unit_list", units: property.units %>
+  <% else %>
+    <p class="text-xl">No units uploaded for this property. To add one, click "Edit this property".<p>
+  <% end %>
 </div>

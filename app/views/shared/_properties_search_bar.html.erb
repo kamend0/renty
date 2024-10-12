@@ -1,0 +1,8 @@
+<%= form_tag properties_path, method: :get do %>
+    <div id="properties-search-bar">
+        <%= form_tag properties_path, { method: :get, class: "flex mb-1" } do %>
+            <%= text_field_tag :city, params[:city], { class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full", placeholder: "Search for a city..." } %>
+            <% button_tag type: "submit", class: "hidden" %>
+        <% end %>
+    </div>
+<% end %>

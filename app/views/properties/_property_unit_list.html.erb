@@ -1,0 +1,12 @@
+<div class="my-5">
+    <% units.each_with_index do |unit, index| %>
+        <div class="my-5">
+            <h2 class="font-bold text-2xl">Unit <%= index + 1 %></h2>
+            <ul id="<%= "property-unit-" + index.to_s %>">
+                <li><%= unit.bedroom_count %> bed, <%= unit.bathroom_count %> bath</li>
+                <li><%= unit.square_footage %> sq. ft.</li>
+                <li><b><%= number_to_currency(unit.rent_price, unit: "$", separator: ".", delimiter: ",", precision: 2) %></b> per month</li>
+            </ul>
+        </div>
+    <% end %>
+</div>
